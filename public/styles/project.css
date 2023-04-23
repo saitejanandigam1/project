@@ -1,5 +1,5 @@
 body{
-    background-image: url('images/sky.jpg');
+    background-image: url('/public/images/sky.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     margin:0px; 

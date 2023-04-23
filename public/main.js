@@ -112,3 +112,27 @@ function create_n(e){
     const post1=new Post(note);
     console.log(post1);
 }
+
+
+const usersBtn=document.getElementById("users-btn");
+
+if(usersBtn)usersBtn.addEventListener('click',getUsers);
+
+function getUsers(){
+    fetch("http://localhost:3000/users/")
+    .then((res)=>res.json())
+    .then((data)=>{
+        console.log(data)
+        let ul=document.getElementById("allUsers");
+
+        data.forEach((user)=>{
+            let li=document.createElement('li');
+            let text=document.createTextNode(user.userName);
+
+            li.appendChild(text);
+            ul.appendChild(li);
+        })
+    })
+
+    .catch((err)=>console.log(`error! ${err}`));
+}
