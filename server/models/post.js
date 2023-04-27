@@ -10,5 +10,4 @@ const post=[{
 function getPost(){
     return post;
 }
-
 module.exports={getPost};
