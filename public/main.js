@@ -89,12 +89,12 @@ class Post{
         this.posttext=text;
     }
 
-    getnote(){
+    getpost(){
         return this.posttext;
 
     }
 
-    setnote(text_parameter){
+    setpost(text_parameter){
         this.posttext=text_parameter;
     }
 
@@ -105,11 +105,11 @@ function create_n(e){
 
     e.preventDefault();
 
-    let note=document.getElementById("post_id").value;
+    let post=document.getElementById("post_id").value;
 
     
 
-    const post1=new Post(note);
+    const post1=new Post(post);
     console.log(post1);
 }
 
