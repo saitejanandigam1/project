@@ -4,6 +4,7 @@ const app=express();       // To start the app we need this.
 
 
 const userRoutes=require('./server/routes/user');
+const postRoutes=require('./server/routes/post');
 
 
 app.use(express.json());
@@ -19,6 +20,7 @@ app.use(function(req, res, next) {
 });
 
   app.use("/users", userRoutes);
+  app.use("/posts",postRoutes);
 
 
   
